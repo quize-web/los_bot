@@ -8,7 +8,7 @@ services:
 #    restart: always
     volumes:
       - ./python/src/cars:/usr/src/app/src/nomeroff-net/cars
-      - ./python/src/hello.py:/usr/src/app/src/nomeroff-net/run_los.py
+      - ./python/src/run_los.py:/usr/src/app/src/nomeroff-net/run_los.py
     networks:
       nomer:
         aliases:
