@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+
+  # PYTHON
+  python:
+    container_name: python
+    build: ./python
+#    restart: always
+    volumes:
+      - ./python/src/cars:/usr/src/app/src/nomeroff-net/cars
+      - ./python/src/hello.py:/usr/src/app/src/nomeroff-net/run_los.py
+    networks:
+      nomer:
+        aliases:
+          - python_net
+
+networks:
+  nomer:
+    driver: bridge
